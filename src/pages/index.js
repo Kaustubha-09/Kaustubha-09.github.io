@@ -4,5 +4,7 @@ export { default as Projects } from "./Projects/Projects.jsx";
 export { default as Skills } from "./Skills/Skills.jsx";
 export { default as Achievements } from "./Achievements/Achievements.jsx";
 export { default as Involvements } from "./Involvements/Involvements.jsx";
+export { default as Gallery } from "./Gallery/Gallery.jsx";
+export { default as Journey } from "./Journey/Journey.jsx";
 export { default as Contact } from "./Contact/Contact.jsx";
 export { default as NotFound } from "./NotFound/NotFound.jsx";

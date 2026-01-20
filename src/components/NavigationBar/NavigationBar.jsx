@@ -107,6 +107,24 @@ const NavigationBar = () => {
           </li>
           <li>
             <Link 
+              to="/gallery" 
+              className={`${styles.link} ${isActive("/gallery") ? styles.active : ""}`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Gallery
+            </Link>
+          </li>
+          <li>
+            <Link 
+              to="/journey" 
+              className={`${styles.link} ${isActive("/journey") ? styles.active : ""}`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Journey
+            </Link>
+          </li>
+          <li>
+            <Link 
               to="/contact" 
               className={`${styles.link} ${isActive("/contact") ? styles.active : ""}`}
               onClick={() => setIsMenuOpen(false)}
