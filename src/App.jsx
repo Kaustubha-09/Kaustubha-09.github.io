@@ -1,20 +1,23 @@
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Experience from "./components/Experience";
-import Projects from "./components/Projects";
-import Skills from "./components/Skills";
-import Contact from "./components/Contact";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import NavigationBar from "./components/NavigationBar/NavigationBar.jsx";
+import { Home, Experience, Projects, Skills, Achievements, Involvements, Contact } from "./pages";
+import "./index.css";
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <Hero />
-      <Experience />
-      <Projects />
-      <Skills />
-      <Contact />
-    </>
+    <Router>
+      <NavigationBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/experience" element={<Experience />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/skills" element={<Skills />} />
+        <Route path="/achievements" element={<Achievements />} />
+        <Route path="/involvements" element={<Involvements />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Router>
   );
 }
 
