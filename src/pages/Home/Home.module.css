@@ -7,3 +7,10 @@
   display: flex;
   align-items: center;
 }
+
+.cardWrapper {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  width: 100%;
+}

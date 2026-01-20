@@ -19,6 +19,12 @@
   gap: 2rem;
 }
 
+.cardWrapper {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
 .card {
   background: rgba(30, 41, 59, 0.4);
   border-radius: 16px;
@@ -110,8 +116,15 @@
   color: #4dd0e1;
 }
 
-.link:hover::after {
+.link:hover::after,
+.link:focus::after {
   transform: translateX(5px);
+}
+
+.link:focus-visible {
+  outline: 2px solid #64ffda;
+  outline-offset: 4px;
+  border-radius: 4px;
 }
 
 @media (max-width: 768px) {

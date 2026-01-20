@@ -112,6 +112,19 @@
 
 .bullets li::marker {
   color: #64ffda;
+  font-size: 1.2em;
+}
+
+.bullets li::before {
+  content: '';
+  position: absolute;
+  left: -1.5rem;
+  top: 0.5rem;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #64ffda;
+  opacity: 0.6;
 }
 
 .bullets li:last-child {

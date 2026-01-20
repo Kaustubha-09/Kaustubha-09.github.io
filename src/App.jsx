@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavigationBar from "./components/NavigationBar/NavigationBar.jsx";
-import { Home, Experience, Projects, Skills, Achievements, Involvements, Contact } from "./pages";
+import { Home, Experience, Projects, Skills, Achievements, Involvements, Contact, NotFound } from "./pages";
 import "./index.css";
 
 function App() {
@@ -16,6 +16,7 @@ function App() {
         <Route path="/achievements" element={<Achievements />} />
         <Route path="/involvements" element={<Involvements />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );

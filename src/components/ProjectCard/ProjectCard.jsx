@@ -8,8 +8,9 @@ const ProjectCard = ({ project }) => {
         <div className={styles.imageContainer}>
           <img 
             src={project.image} 
-            alt={project.title}
+            alt={`${project.title} project screenshot`}
             className={styles.image}
+            loading="lazy"
           />
         </div>
       )}
@@ -37,8 +38,9 @@ const ProjectCard = ({ project }) => {
             <a 
               href={project.links.github} 
               target="_blank" 
-              rel="noreferrer"
+              rel="noreferrer noopener"
               className={styles.link}
+              aria-label={`View ${project.title} on GitHub`}
             >
               GitHub
             </a>
@@ -47,8 +49,9 @@ const ProjectCard = ({ project }) => {
             <a 
               href={project.links.website} 
               target="_blank" 
-              rel="noreferrer"
+              rel="noreferrer noopener"
               className={styles.link}
+              aria-label={`Visit ${project.title} website`}
             >
               Website
             </a>
@@ -57,8 +60,9 @@ const ProjectCard = ({ project }) => {
             <a 
               href={project.links.demo} 
               target="_blank" 
-              rel="noreferrer"
+              rel="noreferrer noopener"
               className={styles.link}
+              aria-label={`View ${project.title} demo`}
             >
               Demo
             </a>

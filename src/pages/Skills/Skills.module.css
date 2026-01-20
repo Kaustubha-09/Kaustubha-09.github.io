@@ -13,6 +13,12 @@
   text-align: center;
 }
 
+.groupWrapper {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
 .group {
   margin-bottom: 3rem;
 }
@@ -40,10 +46,18 @@
   color: #ccd6f6;
   transition: all 0.3s ease;
   font-weight: 500;
+  display: inline-block;
 }
 
-.skill:hover {
+.skill:hover,
+.skill:focus {
   background: rgba(100, 255, 218, 0.15);
   border-color: rgba(100, 255, 218, 0.4);
   transform: translateY(-2px);
+  outline: none;
+}
+
+.skill:focus-visible {
+  outline: 2px solid #64ffda;
+  outline-offset: 4px;
 }
