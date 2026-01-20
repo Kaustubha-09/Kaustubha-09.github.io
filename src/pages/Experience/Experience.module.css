@@ -1,0 +1,14 @@
+.section {
+  padding: 6rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #0f172a;
+}
+
+.title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 4rem;
+  font-weight: 700;
+  color: #ccd6f6;
+  text-align: center;
+}

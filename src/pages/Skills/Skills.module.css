@@ -1,0 +1,49 @@
+.section {
+  padding: 6rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #0f172a;
+}
+
+.title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 4rem;
+  font-weight: 700;
+  color: #ccd6f6;
+  text-align: center;
+}
+
+.group {
+  margin-bottom: 3rem;
+}
+
+.category {
+  margin-bottom: 1.25rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #64ffda;
+  letter-spacing: -0.01em;
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.skill {
+  padding: 0.5rem 1.2rem;
+  font-size: 0.95rem;
+  background: rgba(100, 255, 218, 0.1);
+  border: 1px solid rgba(100, 255, 218, 0.2);
+  border-radius: 8px;
+  color: #ccd6f6;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.skill:hover {
+  background: rgba(100, 255, 218, 0.15);
+  border-color: rgba(100, 255, 218, 0.4);
+  transform: translateY(-2px);
+}
