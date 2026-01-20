@@ -2,7 +2,14 @@ import experience from "../data/experience";
 
 export default function Experience() {
   return (
-    <section style={{ padding: "4rem 2rem", maxWidth: "900px", margin: "0 auto" }}>
+    <section
+      id="experience"
+      style={{
+        padding: "4rem 2rem",
+        maxWidth: "900px",
+        margin: "0 auto",
+      }}
+    >
       <h2>Experience</h2>
 
       {experience.map((company, idx) => (
