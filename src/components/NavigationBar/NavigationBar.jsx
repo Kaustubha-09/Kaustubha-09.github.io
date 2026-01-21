@@ -134,11 +134,20 @@ const NavigationBar = () => {
           </li>
           <li>
             <Link 
-              to="/journey" 
-              className={`${styles.link} ${isActive("/journey") ? styles.active : ""}`}
+              to="/professional-journey" 
+              className={`${styles.link} ${isActive("/professional-journey") ? styles.active : ""}`}
               onClick={() => setIsMenuOpen(false)}
             >
-              Journey
+              Professional Journey
+            </Link>
+          </li>
+          <li>
+            <Link 
+              to="/personal-journey" 
+              className={`${styles.link} ${isActive("/personal-journey") ? styles.active : ""}`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Personal Journey
             </Link>
           </li>
           <li>
