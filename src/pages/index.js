@@ -1,8 +1,10 @@
 export { default as Home } from "./Home/Home.jsx";
 export { default as Experience } from "./Experience/Experience.jsx";
+export { default as Education } from "./Education/Education.jsx";
 export { default as Projects } from "./Projects/Projects.jsx";
 export { default as Skills } from "./Skills/Skills.jsx";
 export { default as Achievements } from "./Achievements/Achievements.jsx";
+export { default as Certifications } from "./Certifications/Certifications.jsx";
 export { default as Involvements } from "./Involvements/Involvements.jsx";
 export { default as Gallery } from "./Gallery/Gallery.jsx";
 export { default as Journey } from "./Journey/Journey.jsx";

@@ -71,6 +71,15 @@ const NavigationBar = () => {
           </li>
           <li>
             <Link 
+              to="/education" 
+              className={`${styles.link} ${isActive("/education") ? styles.active : ""}`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Education
+            </Link>
+          </li>
+          <li>
+            <Link 
               to="/projects" 
               className={`${styles.link} ${isActive("/projects") ? styles.active : ""}`}
               onClick={() => setIsMenuOpen(false)}
@@ -94,6 +103,15 @@ const NavigationBar = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               Achievements
+            </Link>
+          </li>
+          <li>
+            <Link 
+              to="/certifications" 
+              className={`${styles.link} ${isActive("/certifications") ? styles.active : ""}`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Certifications
             </Link>
           </li>
           <li>
