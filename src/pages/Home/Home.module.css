@@ -1,244 +1,289 @@
-.section {
-  padding: 0;
-  max-width: 100%;
-  margin: 0;
-  background: linear-gradient(180deg, #0a0e27 0%, #0f172a 100%);
-  min-height: calc(100vh - 80px);
+.container {
   display: flex;
   flex-direction: column;
+  min-height: calc(100vh - 80px);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: 
+    radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%),
+    linear-gradient(180deg, #0a0e27 0%, #1a1f3a 50%, #0a0e27 100%);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem 1rem;
+  opacity: 0;
+  transition: opacity 0.8s ease-out;
+}
+
+/* Animated Stars */
+.container::before,
+.container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.container::before {
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, #fff, transparent),
+    radial-gradient(2px 2px at 60px 70px, rgba(255,255,255,0.8), transparent),
+    radial-gradient(1px 1px at 50px 50px, rgba(255,255,255,0.6), transparent),
+    radial-gradient(1px 1px at 80px 10px, rgba(255,255,255,0.4), transparent),
+    radial-gradient(2px 2px at 90px 40px, rgba(255,255,255,0.5), transparent);
+  background-repeat: repeat;
+  background-size: 200px 100px;
+  animation: sparkle 20s linear infinite;
+}
+
+.container::after {
+  background-image: 
+    radial-gradient(1px 1px at 30px 60px, rgba(255,255,255,0.5), transparent),
+    radial-gradient(1px 1px at 70px 20px, rgba(255,255,255,0.4), transparent),
+    radial-gradient(1px 1px at 100px 90px, rgba(255,255,255,0.3), transparent);
+  background-repeat: repeat;
+  background-size: 150px 80px;
+  animation: sparkle 15s linear infinite reverse;
+}
+
+@keyframes sparkle {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100px);
+  }
+}
+
+.container > div {
+  padding: 0.75em 0.25em;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+}
+
+.col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.25em;
+}
+
+.imageWrapper {
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 
-.cardWrapper {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-  width: 100%;
-  flex-shrink: 0;
+.professionalHeadshot {
+  height: 10em;
+  width: 10em;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 }
 
-.aboutWrapper {
-  width: 100%;
-  padding: 4rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+.textWhite {
+  color: white !important;
 }
 
-.about {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.aboutTitle {
-  font-size: clamp(2rem, 5vw, 3rem);
-  margin-bottom: 3rem;
+.headingOne {
+  font-size: 2.5em;
   font-weight: 700;
-  color: #ccd6f6;
-  position: relative;
-  display: inline-block;
-  padding-bottom: 1rem;
+  white-space: nowrap;
 }
 
-.aboutTitle::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 60px;
-  height: 4px;
-  background: linear-gradient(90deg, #64ffda, #4dd0e1);
-  border-radius: 2px;
+.headingThree {
+  font-size: 1.5em;
+  font-weight: 400;
 }
 
-.aboutContent {
-  color: #8892b0;
-  line-height: 1.8;
-  font-size: clamp(1rem, 2vw, 1.15rem);
-}
-
-.aboutParagraph {
-  margin-bottom: 1.5rem;
-  color: #8892b0;
-}
-
-.aboutParagraph strong {
-  color: #64ffda;
-  font-weight: 600;
-}
-
-.aboutList {
-  margin: 1.5rem 0 1.5rem 2rem;
-  padding: 0;
-  list-style: none;
-}
-
-.aboutList li {
-  margin-bottom: 0.75rem;
-  padding-left: 1.5rem;
-  position: relative;
-  color: #ccd6f6;
-}
-
-.aboutList li::before {
-  content: '▹';
-  position: absolute;
-  left: 0;
-  color: #64ffda;
-  font-size: 1.2em;
-  line-height: 1;
-}
-
-.aboutList li strong {
-  color: #64ffda;
-}
-
-.workAuth {
-  margin-top: 2rem;
-  padding-top: 2rem;
-  border-top: 1px solid rgba(100, 255, 218, 0.1);
-  color: #ccd6f6;
-  font-size: 1rem;
-}
-
-.workAuth strong {
-  color: #64ffda;
-}
-
-.personalInterests {
-  margin-top: 3rem;
-  padding-top: 3rem;
-  border-top: 1px solid rgba(100, 255, 218, 0.1);
-}
-
-.interestsTitle {
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  margin-bottom: 1.5rem;
-  color: #64ffda;
-  font-weight: 600;
-}
-
-.instagramLink,
-.aboutLink {
-  color: #64ffda;
-  text-decoration: none;
-  font-weight: 600;
+.icon {
+  color: white;
+  font-size: 2.5em;
+  border-radius: 0.125em;
   transition: all 0.3s ease;
-  border-bottom: 1px solid transparent;
+  padding: 0.25em;
 }
 
-.instagramLink:hover,
-.instagramLink:focus,
-.aboutLink:hover,
-.aboutLink:focus {
-  color: #4dd0e1;
-  border-bottom-color: #4dd0e1;
-  outline: none;
+.icon:hover {
+  color: #404040;
+  background-color: white;
 }
 
-.instagramLink:focus-visible,
-.aboutLink:focus-visible {
-  outline: 2px solid #64ffda;
-  outline-offset: 4px;
-  border-radius: 4px;
+.resumeButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.75em 1.5em;
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin-top: 0.5em;
+}
+
+.resumeButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: white;
+}
+
+.iconSmall {
+  font-size: 1.25em !important;
 }
 
 /* Tablet */
 @media (max-width: 1024px) {
-  .aboutWrapper {
-    padding: clamp(3rem, 6vw, 4rem) clamp(1.5rem, 4vw, 2rem);
+  .container {
+    min-height: calc(100vh - 70px);
+  }
+  
+  .headingOne {
+    font-size: 2em;
+    white-space: normal;
+  }
+  
+  .headingThree {
+    font-size: 1.3em;
+  }
+  
+  .professionalHeadshot {
+    height: 9em;
+    width: 9em;
   }
 }
 
 /* Mobile */
 @media (max-width: 768px) {
-  .aboutWrapper {
-    padding: clamp(2.5rem, 5vw, 3rem) clamp(1rem, 3vw, 1.5rem);
+  .container {
+    min-height: calc(100vh - 60px);
+    padding: 1rem 0.5rem;
   }
   
-  .aboutContent {
-    font-size: clamp(0.95rem, 2.5vw, 1rem);
+  .headingOne {
+    font-size: 1.75em;
+    white-space: normal;
+    line-height: 1.2;
   }
   
-  .aboutList {
-    margin-left: 1rem;
+  .headingThree {
+    font-size: 1.1em;
   }
   
-  .aboutList li {
-    padding-left: 1.25rem;
+  .professionalHeadshot {
+    height: 8em;
+    width: 8em;
   }
   
-  .interestsTitle {
-    font-size: clamp(1.25rem, 4vw, 1.5rem);
+  .icon {
+    font-size: 2em;
   }
   
-  .workAuth {
-    margin-top: 1.5rem;
-    padding-top: 1.5rem;
-    font-size: 0.9rem;
+  .resumeButton {
+    font-size: 0.9em;
+    padding: 0.65em 1.25em;
   }
 }
 
 /* Small mobile */
 @media (max-width: 480px) {
-  .aboutWrapper {
-    padding: 2rem 0.75rem;
+  .container {
+    padding: 0.75rem 0.25rem;
   }
   
-  .aboutTitle {
-    font-size: clamp(1.5rem, 6vw, 2rem);
-    margin-bottom: 2rem;
+  .headingOne {
+    font-size: 1.5em;
   }
   
-  .aboutContent {
-    font-size: 0.9rem;
+  .headingThree {
+    font-size: 1em;
   }
   
-  .aboutParagraph {
-    margin-bottom: 1.25rem;
+  .professionalHeadshot {
+    height: 7em;
+    width: 7em;
   }
   
-  .aboutList {
-    margin-left: 0.75rem;
+  .icon {
+    font-size: 1.75em;
   }
   
-  .aboutList li {
-    padding-left: 1rem;
-    font-size: 0.9rem;
+  .resumeButton {
+    font-size: 0.85em;
+    padding: 0.6em 1em;
   }
   
-  .personalInterests {
-    margin-top: 2rem;
-    padding-top: 2rem;
-  }
-  
-  .instagramLink {
-    font-size: 0.95rem;
+  .iconSmall {
+    font-size: 1.1em !important;
   }
 }
 
 /* Landscape mobile */
 @media (max-width: 768px) and (orientation: landscape) {
-  .aboutWrapper {
-    padding: 2rem 1.5rem;
+  .container {
+    min-height: calc(100vh - 60px);
+    padding: 0.5rem;
+  }
+  
+  .professionalHeadshot {
+    height: 6em;
+    width: 6em;
+  }
+  
+  .headingOne {
+    font-size: 1.5em;
+    margin: 0.25em 0;
+  }
+  
+  .headingThree {
+    font-size: 0.95em;
+    margin: 0.25em 0;
+  }
+  
+  .icon {
+    font-size: 1.75em;
+  }
+  
+  .resumeButton {
+    font-size: 0.8em;
+    padding: 0.5em 1em;
+    margin-top: 0.25em;
   }
 }
 
 /* Large screens */
 @media (min-width: 1920px) {
-  .aboutWrapper {
-    padding: 5rem 3rem;
-    max-width: 1400px;
+  .container {
+    min-height: calc(100vh - 100px);
   }
   
-  .aboutContent {
-    font-size: 1.2rem;
+  .headingOne {
+    font-size: 3em;
   }
-}
-
-/* Ultra-wide screens */
-@media (min-width: 2560px) {
-  .aboutWrapper {
-    max-width: 1600px;
+  
+  .headingThree {
+    font-size: 1.75em;
+  }
+  
+  .professionalHeadshot {
+    height: 11em;
+    width: 11em;
   }
 }
