@@ -1,7 +1,8 @@
 .container {
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - 80px);
+  min-height: 100vh;
+  height: 100vh;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -10,6 +11,7 @@
     linear-gradient(180deg, #0a0e27 0%, #1a1f3a 50%, #0a0e27 100%);
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
   position: relative;
   overflow: hidden;
   padding: 0;
@@ -127,7 +129,7 @@
 
 .icon {
   color: white;
-  font-size: 2.5em;
+  font-size: 4.5em;
   border-radius: 0.125em;
   transition: all 0.3s ease;
   padding: 0.25em;
@@ -169,7 +171,8 @@
 /* Tablet */
 @media (max-width: 1024px) {
   .container {
-    min-height: calc(100vh - 70px);
+    min-height: 100vh;
+    height: 100vh;
   }
   
   .headingOne {
@@ -185,12 +188,17 @@
     height: 9em;
     width: 9em;
   }
+  
+  .icon {
+    font-size: 4em;
+  }
 }
 
 /* Mobile */
 @media (max-width: 768px) {
   .container {
-    min-height: calc(100vh - 60px);
+    min-height: 100vh;
+    height: 100vh;
     padding: 1rem 0.5rem;
   }
   
@@ -210,7 +218,7 @@
   }
   
   .icon {
-    font-size: 2em;
+    font-size: 3.5em;
   }
   
   .resumeButton {
@@ -222,6 +230,8 @@
 /* Small mobile */
 @media (max-width: 480px) {
   .container {
+    min-height: 100vh;
+    height: 100vh;
     padding: 0.75rem 0.25rem;
   }
   
@@ -239,7 +249,7 @@
   }
   
   .icon {
-    font-size: 1.75em;
+    font-size: 3em;
   }
   
   .resumeButton {
@@ -255,7 +265,8 @@
 /* Landscape mobile */
 @media (max-width: 768px) and (orientation: landscape) {
   .container {
-    min-height: calc(100vh - 60px);
+    min-height: 100vh;
+    height: 100vh;
     padding: 0.5rem;
   }
   
@@ -275,7 +286,7 @@
   }
   
   .icon {
-    font-size: 1.75em;
+    font-size: 3.25em;
   }
   
   .resumeButton {
@@ -288,7 +299,8 @@
 /* Large screens */
 @media (min-width: 1920px) {
   .container {
-    min-height: calc(100vh - 100px);
+    min-height: 100vh;
+    height: 100vh;
   }
   
   .headingOne {
@@ -302,5 +314,9 @@
   .professionalHeadshot {
     height: 11em;
     width: 11em;
+  }
+  
+  .icon {
+    font-size: 5em;
   }
 }
