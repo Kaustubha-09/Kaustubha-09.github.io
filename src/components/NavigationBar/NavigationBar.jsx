@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { FaHome, FaUser, FaFolderOpen, FaTools, FaBriefcase, FaGraduationCap, FaEnvelope } from "react-icons/fa";
 import styles from "./NavigationBar.module.css";
 
 const NavigationBar = () => {
@@ -33,10 +34,6 @@ const NavigationBar = () => {
   return (
     <nav className={`${styles.nav} ${isScrolled ? styles.scrolled : ""}`}>
       <div className={styles.container}>
-        <Link to="/" className={styles.brand} aria-label="Home">
-          Kaustubha
-        </Link>
-
         <button
           className={styles.menuButton}
           onClick={toggleMenu}
@@ -57,25 +54,18 @@ const NavigationBar = () => {
               className={`${styles.link} ${isActive("/") ? styles.active : ""}`}
               onClick={() => setIsMenuOpen(false)}
             >
-              Home
+              <FaHome className={styles.icon} />
+              <span>Introduction</span>
             </Link>
           </li>
           <li>
             <Link 
-              to="/experience" 
-              className={`${styles.link} ${isActive("/experience") ? styles.active : ""}`}
+              to="/about-me" 
+              className={`${styles.link} ${isActive("/about-me") ? styles.active : ""}`}
               onClick={() => setIsMenuOpen(false)}
             >
-              Experience
-            </Link>
-          </li>
-          <li>
-            <Link 
-              to="/education" 
-              className={`${styles.link} ${isActive("/education") ? styles.active : ""}`}
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Education
+              <FaUser className={styles.icon} />
+              <span>About Me</span>
             </Link>
           </li>
           <li>
@@ -84,7 +74,8 @@ const NavigationBar = () => {
               className={`${styles.link} ${isActive("/projects") ? styles.active : ""}`}
               onClick={() => setIsMenuOpen(false)}
             >
-              Projects
+              <FaFolderOpen className={styles.icon} />
+              <span>Projects</span>
             </Link>
           </li>
           <li>
@@ -93,43 +84,28 @@ const NavigationBar = () => {
               className={`${styles.link} ${isActive("/skills") ? styles.active : ""}`}
               onClick={() => setIsMenuOpen(false)}
             >
-              Skills
+              <FaTools className={styles.icon} />
+              <span>Skills & Tools</span>
             </Link>
           </li>
           <li>
             <Link 
-              to="/achievements-certifications" 
-              className={`${styles.link} ${isActive("/achievements-certifications") ? styles.active : ""}`}
+              to="/experience" 
+              className={`${styles.link} ${isActive("/experience") ? styles.active : ""}`}
               onClick={() => setIsMenuOpen(false)}
             >
-              Achievements & Certifications
+              <FaBriefcase className={styles.icon} />
+              <span>Experience</span>
             </Link>
           </li>
           <li>
             <Link 
-              to="/involvements" 
-              className={`${styles.link} ${isActive("/involvements") ? styles.active : ""}`}
+              to="/education" 
+              className={`${styles.link} ${isActive("/education") ? styles.active : ""}`}
               onClick={() => setIsMenuOpen(false)}
             >
-              Leadership
-            </Link>
-          </li>
-          <li>
-            <Link 
-              to="/gallery" 
-              className={`${styles.link} ${isActive("/gallery") ? styles.active : ""}`}
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Gallery
-            </Link>
-          </li>
-          <li>
-            <Link 
-              to="/journey" 
-              className={`${styles.link} ${isActive("/journey") ? styles.active : ""}`}
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Journey
+              <FaGraduationCap className={styles.icon} />
+              <span>Education</span>
             </Link>
           </li>
           <li>
@@ -138,7 +114,8 @@ const NavigationBar = () => {
               className={`${styles.link} ${isActive("/contact") ? styles.active : ""}`}
               onClick={() => setIsMenuOpen(false)}
             >
-              Contact
+              <FaEnvelope className={styles.icon} />
+              <span>Contact</span>
             </Link>
           </li>
         </ul>
