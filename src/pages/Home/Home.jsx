@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { FaLinkedin, FaGithubSquare, FaInstagramSquare, FaEnvelope, FaFileDownload } from "react-icons/fa";
+import { FaLinkedin, FaGithubSquare, FaEnvelope, FaFileDownload } from "react-icons/fa";
 import styles from "./Home.module.css";
 
 const Home = () => {
@@ -59,16 +59,6 @@ const Home = () => {
             aria-label="GitHub Profile"
           >
             <FaGithubSquare className={styles.icon} />
-          </a>
-        </div>
-        <div className={styles.col}>
-          <a 
-            href="https://instagram.com/kaustubha_ev" 
-            target="_blank" 
-            rel="noreferrer noopener"
-            aria-label="Instagram Profile"
-          >
-            <FaInstagramSquare className={styles.icon} />
           </a>
         </div>
         <div className={styles.col}>
