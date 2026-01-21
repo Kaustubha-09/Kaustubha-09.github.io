@@ -32,16 +32,18 @@ const Experience = () => {
 
   return (
     <section className={styles.section}>
-      <h2 className={styles.title}>Experience</h2>
-      {experienceData.map((experience, idx) => (
-        <div
-          key={idx}
-          ref={(el) => (cardsRef.current[idx] = el)}
-          className={styles.cardWrapper}
-        >
-          <ExperienceCard experience={experience} />
-        </div>
-      ))}
+      <div className={styles.content}>
+        <h1 className={styles.title}>Experience</h1>
+        {experienceData.map((experience, idx) => (
+          <div
+            key={idx}
+            ref={(el) => (cardsRef.current[idx] = el)}
+            className={styles.cardWrapper}
+          >
+            <ExperienceCard experience={experience} />
+          </div>
+        ))}
+      </div>
     </section>
   );
 };

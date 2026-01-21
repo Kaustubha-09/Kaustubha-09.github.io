@@ -37,9 +37,9 @@ const AchievementsCertifications = () => {
 
   return (
     <section className={styles.section}>
-      <h2 className={styles.title}>Achievements & Certifications</h2>
-      
-      <div className={styles.tabs}>
+      <div className={styles.content}>
+        <h1 className={styles.title}>Achievements & Certifications</h1>
+        <div className={styles.tabs}>
         <button
           className={`${styles.tab} ${activeTab === "achievements" ? styles.active : ""}`}
           onClick={() => setActiveTab("achievements")}
@@ -84,6 +84,7 @@ const AchievementsCertifications = () => {
             ))}
           </div>
         )}
+        </div>
       </div>
     </section>
   );

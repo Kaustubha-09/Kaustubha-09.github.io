@@ -31,8 +31,9 @@ const Involvements = () => {
 
   return (
     <section className={styles.section}>
-      <h2 className={styles.title}>Leadership & Involvement</h2>
-      <div className={styles.grid}>
+      <div className={styles.content}>
+        <h1 className={styles.title}>Leadership & Involvement</h1>
+        <div className={styles.grid}>
         {involvementsData.map((involvement, idx) => (
           <div
             key={idx}
@@ -68,6 +69,7 @@ const Involvements = () => {
             </div>
           </div>
         ))}
+        </div>
       </div>
     </section>
   );

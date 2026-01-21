@@ -32,17 +32,19 @@ const Projects = () => {
 
   return (
     <section className={styles.section}>
-      <h2 className={styles.title}>Projects</h2>
-      <div className={styles.grid}>
-        {projectsData.map((project, idx) => (
-          <div
-            key={idx}
-            ref={(el) => (cardsRef.current[idx] = el)}
-            className={styles.cardWrapper}
-          >
-            <ProjectCard project={project} />
-          </div>
-        ))}
+      <div className={styles.content}>
+        <h1 className={styles.title}>Projects</h1>
+        <div className={styles.grid}>
+          {projectsData.map((project, idx) => (
+            <div
+              key={idx}
+              ref={(el) => (cardsRef.current[idx] = el)}
+              className={styles.cardWrapper}
+            >
+              <ProjectCard project={project} />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
