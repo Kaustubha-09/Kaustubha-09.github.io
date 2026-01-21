@@ -98,20 +98,11 @@ const NavigationBar = () => {
           </li>
           <li>
             <Link 
-              to="/achievements" 
-              className={`${styles.link} ${isActive("/achievements") ? styles.active : ""}`}
+              to="/achievements-certifications" 
+              className={`${styles.link} ${isActive("/achievements-certifications") ? styles.active : ""}`}
               onClick={() => setIsMenuOpen(false)}
             >
-              Achievements
-            </Link>
-          </li>
-          <li>
-            <Link 
-              to="/certifications" 
-              className={`${styles.link} ${isActive("/certifications") ? styles.active : ""}`}
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Certifications
+              Achievements & Certifications
             </Link>
           </li>
           <li>
@@ -134,20 +125,11 @@ const NavigationBar = () => {
           </li>
           <li>
             <Link 
-              to="/professional-journey" 
-              className={`${styles.link} ${isActive("/professional-journey") ? styles.active : ""}`}
+              to="/journey" 
+              className={`${styles.link} ${isActive("/journey") ? styles.active : ""}`}
               onClick={() => setIsMenuOpen(false)}
             >
-              Professional Journey
-            </Link>
-          </li>
-          <li>
-            <Link 
-              to="/personal-journey" 
-              className={`${styles.link} ${isActive("/personal-journey") ? styles.active : ""}`}
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Personal Journey
+              Journey
             </Link>
           </li>
           <li>
