@@ -42,6 +42,17 @@
   border-color: rgba(100, 255, 218, 0.4);
 }
 
+.logoLink {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.logoLink:hover {
+  transform: scale(1.05);
+}
+
 .logo {
   width: 100%;
   height: 100%;
@@ -62,6 +73,26 @@
   letter-spacing: -0.01em;
 }
 
+.companyLink {
+  color: #64ffda;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.companyLink:hover,
+.companyLink:focus {
+  color: #4dd0e1;
+  border-bottom-color: #4dd0e1;
+  outline: none;
+}
+
+.companyLink:focus-visible {
+  outline: 2px solid #64ffda;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
 .location {
   margin: 0;
   color: #8892b0;
@@ -79,16 +110,100 @@
 .roleHeader {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 1rem;
   flex-wrap: wrap;
   gap: 0.5rem;
+}
+
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
 }
 
 .title {
   font-size: 1.2rem;
   color: #ccd6f6;
   font-weight: 600;
+}
+
+.appStoreLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #64ffda;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  background: rgba(100, 255, 218, 0.1);
+  border: 1px solid rgba(100, 255, 218, 0.2);
+  width: fit-content;
+}
+
+.appStoreLink svg {
+  width: 16px;
+  height: 16px;
+}
+
+.appStoreLink:hover,
+.appStoreLink:focus {
+  color: #4dd0e1;
+  background: rgba(100, 255, 218, 0.15);
+  border-color: rgba(100, 255, 218, 0.4);
+  transform: translateY(-1px);
+  outline: none;
+}
+
+.appStoreLink:focus-visible {
+  outline: 2px solid #64ffda;
+  outline-offset: 4px;
+}
+
+.bulletLink {
+  color: #64ffda;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.bulletLink:hover,
+.bulletLink:focus {
+  color: #4dd0e1;
+  border-bottom-color: #4dd0e1;
+  outline: none;
+}
+
+.bulletLink:focus-visible {
+  outline: 2px solid #64ffda;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.projectLink {
+  color: #64ffda;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid transparent;
+  font-weight: 600;
+}
+
+.projectLink:hover,
+.projectLink:focus {
+  color: #4dd0e1;
+  border-bottom-color: #4dd0e1;
+  outline: none;
+}
+
+.projectLink:focus-visible {
+  outline: 2px solid #64ffda;
+  outline-offset: 4px;
+  border-radius: 4px;
 }
 
 .period {
@@ -180,8 +295,22 @@
     gap: 0.5rem;
   }
   
+  .titleContainer {
+    width: 100%;
+  }
+  
   .title {
     font-size: clamp(1.1rem, 3vw, 1.2rem);
+  }
+  
+  .appStoreLink {
+    font-size: 0.8rem;
+    padding: 0.25rem 0.5rem;
+  }
+  
+  .appStoreLink svg {
+    width: 14px;
+    height: 14px;
   }
   
   .period {

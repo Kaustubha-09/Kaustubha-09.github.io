@@ -57,11 +57,11 @@ const Home = () => {
           <h2 className={styles.aboutTitle}>About</h2>
           <div className={styles.aboutContent}>
             <p className={styles.aboutParagraph}>
-              My career didn't begin in computer science - it began in architectural engineering, designing spaces where people could live, work, and connect. Over time, I realized I was less drawn to the physical walls and more fascinated by the systems behind them - the invisible structures that make things work. That curiosity led me to pursue my Master's in Computer Science at Northeastern University, where my "blueprints" became algorithms, APIs, and AI models.
+              My career didn't begin in computer science - it began in architectural engineering, designing spaces where people could live, work, and connect. Over time, I realized I was less drawn to the physical walls and more fascinated by the systems behind them - the invisible structures that make things work. That curiosity led me to pursue my Master's in Computer Science at <a href="https://siliconvalley.northeastern.edu/kaustubha-eluri-aspiring-product-manager/" target="_blank" rel="noreferrer noopener" className={styles.aboutLink}>Northeastern University</a>, where my "blueprints" became algorithms, APIs, and AI models.
             </p>
             
             <p className={styles.aboutParagraph}>
-              Today, I'm advancing AI accessibility research as a Research Assistant at the Smith-Kettlewell Eye Research Institute, developing <strong>YouDescribeX</strong>, an AI-powered extension of YouDescribe that enables blind and visually impaired users to enjoy videos through intelligent audio descriptions. From integrating AI/ML pipelines to building real-time bot features, my work ensures WCAG compliance and inclusive design across web, iOS, and Android.
+              Today, I'm advancing AI accessibility research as a Research Assistant at the <a href="https://www.ski.org/" target="_blank" rel="noreferrer noopener" className={styles.aboutLink}>Smith-Kettlewell Eye Research Institute</a>, developing <a href="https://ydx.youdescribe.org/home" target="_blank" rel="noreferrer noopener" className={styles.aboutLink}><strong>YouDescribeX</strong></a>, an AI-powered extension of YouDescribe that enables blind and visually impaired users to enjoy videos through intelligent audio descriptions. From integrating AI/ML pipelines to building real-time bot features, my work ensures WCAG compliance and inclusive design across web, iOS, and Android.
             </p>
             
             <p className={styles.aboutParagraph}>

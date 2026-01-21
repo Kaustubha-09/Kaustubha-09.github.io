@@ -2,11 +2,13 @@
   {
     "company": "Smith-Kettlewell Eye Research Institute",
     "location": "San Francisco, CA",
-    "logo": "/assets/organizations/smith-kettlewell-logo.webp",
+    "logo": "/assets/experience/smith-kettlewell-eye.webp",
+    "website": "https://www.ski.org/",
     "roles": [
       {
         "title": "Lead SWE (AI/ML, Web & Mobile) – YouDescribeX",
         "period": "Sep. 2025 – Dec. 2025",
+        "projectLink": "https://ydx.youdescribe.org/home",
         "bullets": [
           "Promoted to lead engineering efforts across AI/ML, web, and mobile platforms, overseeing end-to-end system design, implementation, and deployment.",
           "Led a cross-functional team of researchers, engineers, and accessibility specialists to deliver new features with biweekly releases while maintaining a crash rate below 1%.",
@@ -18,8 +20,10 @@
       {
         "title": "Research Assistant – YouDescribeX",
         "period": "Jul. 2025 – Dec. 2025",
+        "projectLink": "https://ydx.youdescribe.org/home",
+        "appStoreLink": "https://apps.apple.com/us/app/youdescribe/id1177344886",
         "bullets": [
-          "Developed YouDescribeX to improve accessibility for blind and visually impaired users; optimized API and client flows for 15% faster page loads and 20% higher 30-day retention.",
+          "Developed YouDescribeX (App Store) to improve accessibility for blind and visually impaired users; optimized API and client flows for 15% faster page loads and 20% higher 30-day retention.",
           "Integrated a new backend inference path for AI-generated descriptions by updating API and service layers while maintaining backward compatibility.",
           "Built ML pipelines for generating and refining audio description prompts; prompt tuning and ranking methods improved relevance by 18%.",
           "Implemented Infobot for in-video Q&A with temporal grounding; achieved a top-3 hit rate of 86% on a 300-question benchmark.",
@@ -63,6 +67,7 @@
     "company": "Northeastern University – Khoury College of Computer Sciences",
     "location": "San Jose, CA",
     "logo": "/assets/organizations/northeastern-logo.webp",
+    "website": "https://www.khoury.northeastern.edu/",
     "roles": [
       {
         "title": "Teaching Assistant – CS 5520 Mobile Application Development",

@@ -118,7 +118,8 @@
   font-weight: 600;
 }
 
-.instagramLink {
+.instagramLink,
+.aboutLink {
   color: #64ffda;
   text-decoration: none;
   font-weight: 600;
@@ -127,13 +128,16 @@
 }
 
 .instagramLink:hover,
-.instagramLink:focus {
+.instagramLink:focus,
+.aboutLink:hover,
+.aboutLink:focus {
   color: #4dd0e1;
   border-bottom-color: #4dd0e1;
   outline: none;
 }
 
-.instagramLink:focus-visible {
+.instagramLink:focus-visible,
+.aboutLink:focus-visible {
   outline: 2px solid #64ffda;
   outline-offset: 4px;
   border-radius: 4px;
