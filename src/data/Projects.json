@@ -97,5 +97,53 @@
     "image": "/assets/projects/husky-mingle.webp",
     "period": "Jan. 2024 – Apr. 2024",
     "organization": "Northeastern University"
+  },
+  {
+    "title": "Course Scheduling Optimization",
+    "description": "Modeled course scheduling conflicts as a graph-coloring problem and implemented Greedy and Welsh–Powell algorithms.",
+    "highlights": [
+      "Reduced simulated scheduling conflicts by 40% and improved room utilization by 12%",
+      "Generated feasible schedules efficiently in practice, with typical datasets completing in under 2 seconds",
+      "Used as a teaching case in CS 5800 Algorithms to demonstrate practical applications of graph coloring"
+    ],
+    "tags": ["Algorithms", "Graph Theory", "Optimization", "Python"],
+    "links": {
+      "github": "https://github.com/Kaustubha-09/course-scheduling-optimization"
+    },
+    "image": "/assets/projects/course-scheduling.webp",
+    "period": "Mar. 2024 – Apr. 2024",
+    "organization": "Northeastern University"
+  },
+  {
+    "title": "Impact of Online Images on Gender Bias",
+    "description": "Analyzed a large-scale image-text dataset using computer vision features and text embeddings to study gender bias.",
+    "highlights": [
+      "Developed bias metrics to compare gender-related signals in textual embeddings and image-derived representations",
+      "Conducted controlled online survey experiments to evaluate alignment between model outputs and human perceptions",
+      "Presented results at a class research symposium and contributed to follow-on research discussions"
+    ],
+    "tags": ["Research", "Computer Vision", "NLP", "Bias Analysis", "Python"],
+    "links": {
+      "github": "https://github.com/Kaustubha-09/gender-bias-analysis"
+    },
+    "image": "/assets/projects/gender-bias.webp",
+    "period": "Jan. 2024 – Apr. 2024",
+    "organization": "Northeastern University"
+  },
+  {
+    "title": "SPAMbase – Email/SMS Classification",
+    "description": "Built a Naïve Bayes spam classifier using bag-of-words features (CountVectorizer) for email and SMS classification.",
+    "highlights": [
+      "Evaluated model performance using precision, recall, ROC-AUC, and confusion matrices on a benchmark dataset",
+      "Reduced false negatives through threshold tuning, prior adjustment, and token filtering",
+      "Used as a baseline reference in later machine learning coursework"
+    ],
+    "tags": ["Machine Learning", "NLP", "Classification", "Python", "scikit-learn"],
+    "links": {
+      "github": "https://github.com/Kaustubha-09/spambase"
+    },
+    "image": "/assets/projects/spambase.webp",
+    "period": "Oct. 2023 – Nov. 2023",
+    "organization": "Independent Project"
   }
 ]
