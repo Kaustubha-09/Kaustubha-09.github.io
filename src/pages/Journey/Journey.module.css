@@ -32,11 +32,71 @@
   text-align: center;
   color: #8892b0;
   font-size: clamp(1rem, 2vw, 1.15rem);
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
   line-height: 1.7;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.tab {
+  padding: 0.75rem 2rem;
+  background: rgba(30, 41, 59, 0.4);
+  border: 1px solid rgba(100, 255, 218, 0.2);
+  border-radius: 8px;
+  color: #8892b0;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.tab:hover {
+  border-color: rgba(100, 255, 218, 0.4);
+  color: #ccd6f6;
+  transform: translateY(-2px);
+}
+
+.tab.active {
+  background: rgba(100, 255, 218, 0.1);
+  border-color: #64ffda;
+  color: #64ffda;
+  box-shadow: 0 4px 15px rgba(100, 255, 218, 0.2);
+}
+
+.tab.active::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #64ffda, #4dd0e1);
+}
+
+.tabContent {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .timeline {
@@ -70,6 +130,9 @@
   box-shadow: 0 0 0 2px var(--type-color, #64ffda);
   z-index: 2;
   transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .timelineItem:hover .markerDot {
@@ -116,12 +179,8 @@
 }
 
 .personalIcon {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  font-size: 2rem;
+  font-size: 1rem;
   line-height: 1;
-  z-index: 1;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
 
@@ -209,6 +268,16 @@
     padding: clamp(3rem, 6vw, 4rem) 1rem;
   }
   
+  .tabs {
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+  
+  .tab {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  
   .timeline {
     padding-left: 2rem;
   }
@@ -238,10 +307,7 @@
   }
   
   .personalIcon {
-    position: static;
-    display: inline-block;
-    margin-bottom: 0.5rem;
-    font-size: 1.5rem;
+    font-size: 0.8rem;
   }
   
   .itemTitle {
@@ -257,6 +323,16 @@
 @media (max-width: 480px) {
   .section {
     padding: 3rem 0.75rem;
+  }
+  
+  .tabs {
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .tab {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.85rem;
   }
   
   .timeline {
@@ -289,7 +365,7 @@
   }
   
   .personalIcon {
-    font-size: 1.25rem;
+    font-size: 0.7rem;
   }
 }
 
