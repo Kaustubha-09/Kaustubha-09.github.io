@@ -5,6 +5,24 @@ import { Home, AboutMe, Experience, Education, Projects, Skills, Contact, NotFou
 import "./index.css";
 
 function App() {
+  // Handle GitHub Pages redirect from 404.html
+  React.useEffect(() => {
+    const searchParams = new URLSearchParams(window.location.search);
+    const redirect = searchParams.get('redirect');
+    
+    if (redirect) {
+      // Remove the redirect parameter and navigate to the correct path
+      window.history.replaceState(null, null, redirect);
+    } else if (sessionStorage.getItem('redirect')) {
+      // Fallback: use sessionStorage if query param is missing
+      const storedRedirect = sessionStorage.getItem('redirect');
+      sessionStorage.removeItem('redirect');
+      if (storedRedirect !== window.location.pathname) {
+        window.history.replaceState(null, null, storedRedirect);
+      }
+    }
+  }, []);
+
   return (
     <Router>
       <NavigationBar />
