@@ -31,25 +31,27 @@ const Skills = () => {
 
   return (
     <section className={styles.section}>
-      <h2 className={styles.title}>Technical Skills</h2>
-      {skillsData.map((group, idx) => (
-        <div
-          key={idx}
-          ref={(el) => (groupsRef.current[idx] = el)}
-          className={styles.groupWrapper}
-        >
-          <div className={styles.group}>
-            <h3 className={styles.category}>{group.category}</h3>
-            <div className={styles.items}>
-              {group.items.map((skill, i) => (
-                <span key={i} className={styles.skill}>
-                  {skill}
-                </span>
-              ))}
+      <div className={styles.content}>
+        <h1 className={styles.title}>Skills & Tools</h1>
+        {skillsData.map((group, idx) => (
+          <div
+            key={idx}
+            ref={(el) => (groupsRef.current[idx] = el)}
+            className={styles.groupWrapper}
+          >
+            <div className={styles.group}>
+              <h3 className={styles.category}>{group.category}</h3>
+              <div className={styles.items}>
+                {group.items.map((skill, i) => (
+                  <span key={i} className={styles.skill}>
+                    {skill}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </section>
   );
 };

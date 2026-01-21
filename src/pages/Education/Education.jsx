@@ -32,16 +32,18 @@ const Education = () => {
 
   return (
     <section className={styles.section}>
-      <h2 className={styles.title}>Education</h2>
-      {educationData.map((education, idx) => (
-        <div
-          key={idx}
-          ref={(el) => (cardsRef.current[idx] = el)}
-          className={styles.cardWrapper}
-        >
-          <EducationCard education={education} />
-        </div>
-      ))}
+      <div className={styles.content}>
+        <h1 className={styles.title}>Education</h1>
+        {educationData.map((education, idx) => (
+          <div
+            key={idx}
+            ref={(el) => (cardsRef.current[idx] = el)}
+            className={styles.cardWrapper}
+          >
+            <EducationCard education={education} />
+          </div>
+        ))}
+      </div>
     </section>
   );
 };
