@@ -5,3 +5,4 @@ export { default as ExperienceCard } from "./ExperienceCard/ExperienceCard.jsx";
 export { default as NavigationBar } from "./NavigationBar/NavigationBar.jsx";
 export { default as ProfileCard } from "./ProfileCard/ProfileCard.jsx";
 export { default as ProjectCard } from "./ProjectCard/ProjectCard.jsx";
+export { default as TechIcon } from "./TechIcon/TechIcon.jsx";
