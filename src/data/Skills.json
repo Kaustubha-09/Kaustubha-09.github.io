@@ -34,5 +34,9 @@
   {
     "category": "Testing & QA",
     "items": ["Unit Testing", "Integration Testing", "Regression Testing", "Automated Test Scripts"]
+  },
+  {
+    "category": "Other",
+    "items": ["Debugging", "Profiling", "Shell Scripting", "BIM/Revit Modeling"]
   }
 ]
